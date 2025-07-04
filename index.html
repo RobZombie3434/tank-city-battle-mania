@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Battle City Clone</title>
+  <style>
+    canvas {
+      background-color: #000;
+      display: block;
+      margin: 0 auto;
+      border: 5px solid #00aaff;
+    }
+  </style>
+</head>
+<body style="background-color: #000; overflow: hidden;">
+  <canvas id="gameCanvas" width="640" height="640"></canvas>
+
+  <div id="creditText">Created By Robin Domingo</div>
+
+  <div id="timerDisplay">00:00.00</div>
+  <div id="gamePopup" style="display:none;">
+    <div id="popupContent">
+      <span id="popupMessage"></span><br>
+      <span id="popupTime"></span>
+    </div>
+  </div>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    #timerDisplay {
+      width: 320px;
+      margin: 16px auto 0 auto;
+      background: #00aaff;
+      color: #111;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 10px 0 8px 0;
+      border-radius: 8px;
+      letter-spacing: 2px;
+      box-shadow: 0 0 16px 2px #00aaff88, 0 2px 8px rgba(0,0,0,0.15);
+      user-select: none;
+    }
+    #gamePopup {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    #popupContent {
+      background: #00aaff;
+      color: #111;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 2rem;
+      text-align: center;
+      padding: 40px 60px;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      letter-spacing: 2px;
+      min-width: 320px;
+    }
+    #popupMessage {
+      display: block;
+      font-size: 2.2rem;
+      margin-bottom: 18px;
+    }
+    #popupTime {
+      display: block;
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+    #creditText {
+      width: 640px;
+      margin: 10px auto 0 auto;
+      background: none;
+      color: #00aaff;
+      font-family: 'Press Start 2P', monospace;
+      font-size: 0.9rem;
+      text-align: center;
+      letter-spacing: 1px;
+      user-select: none;
+      text-shadow: 0 1px 2px #000;
+    }
+  </style>
+
+  <script src="game.js"></script>
+</body>
+</html>
